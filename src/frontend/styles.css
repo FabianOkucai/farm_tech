@@ -248,7 +248,68 @@ section h2 {
     color: var(--secondary);
 }
 
-/* Innovation Highlights */
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.auth-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.auth-link:hover {
+    opacity: 0.7;
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 1rem 5%;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+    min-width: 150px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+}
+
+.stat-item h3 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    /* Shift back to primary forest green for cleaner look */
+    margin-bottom: 0.2rem;
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Innovation & Core Values */
 .highlights-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

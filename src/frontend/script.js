@@ -1,4 +1,4 @@
-import { coreValues, innovationHighlights, problemsSolved, products, outcomes, strategicImpact } from './data.js';
+import { coreValues, innovationHighlights, problemsSolved, products, outcomes, stats } from './data.js';
 
 // Toast Notification System
 export function showToast(message) {
@@ -74,11 +74,10 @@ const Renderer = {
                 <p>${item.desc}</p>
             </div>
         `,
-        impact: (item) => `
-            <div class="impact-card">
-                <div class="impact-icon-shell"></div>
-                <h4>${item.title}</h4>
-                <p>${item.desc}</p>
+        stat: (item) => `
+            <div class="stat-item">
+                <h3>${item.value}</h3>
+                <p>${item.label}</p>
             </div>
         `
     }
@@ -86,7 +85,7 @@ const Renderer = {
 
 // Scroll Reveal Logic
 function initScrollReveal() {
-    const items = document.querySelectorAll(".card, #about, .contact-item, .highlight-item, .challenge-card, .outcome-pill");
+    const items = document.querySelectorAll(".card, #about, .contact-item, .highlight-item, .challenge-card, .outcome-pill, .stat-item");
     items.forEach(item => item.classList.add("reveal"));
 
     const reveal = () => {
@@ -124,17 +123,17 @@ function renderOutcomes() {
     Renderer.render('#outcomes .outcomes-grid', outcomes, Renderer.templates.outcome);
 }
 
-function renderStrategicImpact() {
-    Renderer.render('#strategic-impact .impact-grid', strategicImpact, Renderer.templates.impact);
+function renderStats() {
+    Renderer.render('#stats .stats-grid', stats, Renderer.templates.stat);
 }
 
 function initApp() {
+    renderStats();
     renderValues();
     renderHighlights();
     renderChallenges();
     renderProducts();
     renderOutcomes();
-    renderStrategicImpact();
     initScrollReveal();
 }
 

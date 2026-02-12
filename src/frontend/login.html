@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Farmtech Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="contact-page">
+    <main>
+        <header>
+            <div class="logo">
+                <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">Farmtech Academy</h1>
+            </div>
+            <button class="contact-btn" onclick="window.location.href='index.html'">Back to Home</button>
+        </header>
+
+        <section class="container contact-content" style="max-width: 500px; margin: 0 auto;">
+            <div class="section-header">
+                <h2>Welcome Back</h2>
+                <p class="section-desc">Login to manage your poultry records and sales.</p>
+            </div>
+
+            <div class="contact-form-side">
+                <form id="loginForm"
+                    onsubmit="event.preventDefault(); showToast('Login successful! Redirecting to dashboard...');">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="contact-btn" style="width: 100%;">Login</button>
+                    <p style="text-align: center; margin-top: 1.5rem; color: var(--text-muted);">
+                        Don't have an account? <a href="register.html"
+                            style="color: var(--secondary); font-weight: 600; text-decoration: none;">Register</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Farmtech Academy. Redefining Modern Agriculture.</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module">
+        import { showToast } from './script.js';
+        window.showToast = showToast;
+    </script>
+</body>
+
+</html>

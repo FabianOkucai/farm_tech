@@ -121,6 +121,25 @@ export const products = [
     }
 ];
 
+export const stats = [
+    {
+        value: "500+",
+        label: "Farmers Trained"
+    },
+    {
+        value: "10k+",
+        label: "Birds Managed"
+    },
+    {
+        value: "95%",
+        label: "Accuracy Rate"
+    },
+    {
+        value: "24/7",
+        label: "Digital Support"
+    }
+];
+
 export const outcomes = [
     {
         title: "Improved Health",
