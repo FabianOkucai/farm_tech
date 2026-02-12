@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmtech Academy | Bridging Agriculture & Technology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <section class="hero" id="home">
+            <header>
+                <div class="logo">
+                    <h1>Farmtech Academy</h1>
+                </div>
+                <nav>
+                    <a href="#home">Home</a>
+                    <a href="#products">Solutions</a>
+                    <a href="#about">Our Vision</a>
+                    <a href="#contact">Connect</a>
+                </nav>
+            </header>
+            <div class="hero-content">
+                <h2>Bridging Traditional Farming <br> & Technology</h2>
+                <p>Empowering the next generation of farmers with sustainable practices and premium poultry solutions.
+                </p>
+                <div class="hero-btns">
+                    <button onclick="document.getElementById('products').scrollIntoView()"
+                        style="width: auto; padding: 1.25rem 3rem; background: var(--white); color: var(--primary);">Explore
+                        Solutions</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <div class="section-header">
+                <h2>Premium Solutions</h2>
+            </div>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Organic Feed</h3>
+                        <p>Scientifically formulated organic chicken feed designed for optimal health and maximum yield.
+                            No antibiotics, just pure nutrition.</p>
+                        <button onclick="buyNow('Organic Chicken Feed')">Order Supplies</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Table Eggs</h3>
+                        <p>Farm-to-table excellence. Our fresh table eggs are collected daily from our bio-secure
+                            facilities to ensure premium quality.</p>
+                        <button onclick="buyNow('Fresh Table Eggs')">Order Now</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Health & Wellness</h3>
+                        <p>Essential health supplements and vitamins curated by agricultural experts to keep your flock
+                            thriving in all seasons.</p>
+                        <button onclick="buyNow('Health Supplements')">View Supplements</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Nesting Systems</h3>
+                        <p>Ergonomically designed nesting boxes that prioritize bird welfare and maximize egg production
+                            efficiency.</p>
+                        <button onclick="buyNow('Nesting Boxes')">Equip Your Farm</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Biosecurity</h3>
+                        <p>Professional vaccination programs and sanitization solutions to protect your investment from
+                            environmental risks.</p>
+                        <button onclick="buyNow('Vaccinations')">Consult Expert</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-content">
+                        <h3>Quality Brood</h3>
+                        <p>Start with the best. Our day-old chicks are hatched from elite breeding stock with proven
+                            genetic performance.</p>
+                        <button onclick="buyNow('Day-Old Chicks')">Reserve Batch</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>Our Vision</h2>
+            <p>At Farmtech Academy, we believe the future of food security lies at the intersection of heritage wisdom
+                and technological innovation. We don't just supply farming materials; we nurture a community of
+                tech-forward agriculturalists committed to sustainability and excellence.</p>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>Location</h4>
+                    <p>Biashara Street, Nairobi, Kenya</p>
+                </div>
+                <div class="contact-item">
+                    <h4>Direct Line</h4>
+                    <p>+254 723 852 270</p>
+                </div>
+                <div class="contact-item">
+                    <h4>E-mail</h4>
+                    <p>sales@farmtechacademy.com</p>
+                </div>
+            </div>
+            <button onclick="contactFunction()" style="max-width: 400px; margin: 0 auto; display: block;">Get in
+                Touch</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Farmtech Academy. Redefining Modern Agriculture.</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
