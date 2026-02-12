@@ -1,51 +1,54 @@
 # Farmtech Academy
 
-A modern training hub and e-commerce platform designed to bridge the gap between traditional farming and high-tech agriculture, specializing in quality poultry supplies and agricultural education.
+**Bridging Traditional Farming and High-Tech Agriculture**
 
-## 🌾 About
+Farmtech Academy is a modern training hub and e-commerce platform specializing in quality poultry supplies and agricultural education. This project has been migrated from a vanilla HTML/CSS implementation to a high-performance **Next.js** application with **Tailwind CSS**.
 
-Farmtech Academy is dedicated to providing high-quality poultry supplies to farmers and enthusiasts while promoting sustainable farming practices and animal welfare.
+## 🚀 Technology Stack
 
-## 📁 Project Structure
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Typography**: Outfit & Montserrat (via Google Fonts)
+- **Language**: TypeScript
+- **Icons**: Custom CSS/SVG
 
-```
-Farmtech_Academy/
-├── src/
-│   ├── frontend/          # Web interface files
-│   │   ├── index.html     # Main website
-│   │   ├── styles.css     # Styling
-│   │   └── script.js      # Interactive features
-│   ├── backend/           # Server-side logic (future)
-│   └── assets/            # Images and media files
-├── docs/                  # Documentation and project materials
-│   └── PROJECT INNOVATION.pdf
-├── .gitignore
-├── LICENSE
-└── README.md
-```
+## 🛠️ Project Structure
 
-## 🛒 Products & Services
+- `src/app/`: Next.js App Router pages (Home, Login, Register, Contact)
+- `src/components/`: Reusable React components (Navbar, Footer)
+- `src/lib/`: Application logic and static data
+- `old_project/`: Archive of the original vanilla HTML/CSS implementation
 
-- Organic Chicken Feed
-- Fresh Table Eggs
-- Health Supplements
-- Nesting Boxes
-- Vaccinations
-- Day-Old Chicks
+## 📥 Getting Started
 
-## 📍 Contact
+1. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
 
-- **Location:** Biashara Street, Nairobi, Kenya
-- **Phone:** +254 723852270
-- **Email:** sales@farmtechacademy.com
+2. **Run Development Server**:
+   ```bash
+   npm run dev
+   ```
 
-## 🚀 Getting Started
+3. **Build for Production**:
+   ```bash
+   npm run build
+   ```
 
-Open `src/frontend/index.html` in a web browser to view the website.
+## 🌟 Key Features
 
-## 📄 License
+- **Modern Design**: Premium aesthetics inspired by Apple's design principles.
+- **Responsive Layout**: Fully optimized for mobile, tablet, and desktop.
+- **State-Driven Forms**: Functional contact and auth forms with user feedback.
+- **Dynamic Content**: Sections populated from modular data structures for easy updates.
 
-See LICENSE file for details.
+## 📈 Future Roadmap
+
+- Order management system
+- Inventory tracking
+- Customer dashboard
+- Payment processing integration
 
 ---
-© 2026 Farmtech Academy. All rights reserved.
+*Redefining Modern Agriculture.*
