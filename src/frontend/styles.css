@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
     --primary: #064E3B;
@@ -31,7 +31,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-light);
     color: var(--text-main);
     line-height: 1.6;
@@ -42,7 +42,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
 }
@@ -100,10 +100,8 @@ nav a:hover {
 /* Hero Section */
 .hero {
     position: relative;
-    /* Context for absolute header */
     height: 100vh;
-    /* Full viewport height */
-    background: linear-gradient(rgba(4, 47, 46, 0.7), rgba(4, 47, 46, 0.5)),
+    background: linear-gradient(rgba(4, 47, 46, 0.75), rgba(4, 47, 46, 0.6)),
         url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
@@ -113,24 +111,45 @@ nav a:hover {
     align-items: center;
     text-align: center;
     color: var(--white);
-    padding: 2rem;
+    padding: 0 5%;
 }
 
-.hero h2 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    max-width: 900px;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
+.hero-content {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    /* Offset for the absolute header */
+}
+
+.hero-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    opacity: 0.9;
     animation: fadeInUp 0.8s ease-out;
 }
 
+.hero h2 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out 0.1s backwards;
+}
+
 .hero p {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
     color: rgba(255, 255, 255, 0.9);
-    max-width: 600px;
-    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin: 0;
     font-weight: 300;
-    animation: fadeInUp 1s ease-out 0.2s backwards;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 /* Container */
@@ -199,11 +218,12 @@ button {
     padding: 1rem 2rem;
     border-radius: 12px;
     font-weight: 600;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Outfit', sans-serif;
     cursor: pointer;
     transition: all 0.2s ease;
     width: 100%;
     font-size: 1rem;
+    letter-spacing: 0.02em;
 }
 
 button:hover {
@@ -248,20 +268,20 @@ button:hover {
 
 /* Footer */
 footer {
-    background: #111827;
-    /* Dark Neutral instead of green */
-    color: var(--white);
+    background: var(--white);
+    color: var(--primary);
     text-align: center;
     padding: 5rem 1.5rem;
     margin-top: 5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 footer p {
-    opacity: 0.6;
+    opacity: 0.8;
+    color: var(--text-main);
     font-size: 0.9rem;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.02em;
 }
 
 /* Animations */
