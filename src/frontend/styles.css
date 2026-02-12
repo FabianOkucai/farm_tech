@@ -63,6 +63,28 @@ header {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.contact-btn {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    width: auto;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    white-space: nowrap;
+}
+
+.contact-btn:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
 header h1 {
     font-size: 1.5rem;
     color: var(--white);
@@ -115,14 +137,16 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 1000px;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+    text-align: center;
     margin-top: 4rem;
-    /* Offset for the absolute header */
 }
+
+
 
 .hero-tagline {
     font-family: 'Outfit', sans-serif;
@@ -170,7 +194,91 @@ section h2 {
 .section-header {
     margin-bottom: 2rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.feature-card {
+    border-left: 4px solid var(--secondary);
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+}
+
+/* Training Section */
+#training {
+    background: linear-gradient(135deg, var(--primary) 0%, #065f46 100%);
+    color: var(--white);
+    border-radius: 40px;
+    margin: 4rem auto;
+    padding: 5rem 3rem;
+}
+
+#training h2 {
+    color: var(--white);
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.training-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.training-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary);
+}
+
+/* Innovation Highlights */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.highlight-item {
+    border-left: 3px solid var(--secondary);
+    padding-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-left-color: var(--accent);
+    transform: translateX(10px);
+}
+
+.highlight-item h4 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.highlight-item p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 /* Product Grid */
@@ -343,4 +451,118 @@ footer p {
     .hero h2 {
         font-size: 3rem;
     }
+
+
+
+    .hero-content {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Challenge & Solution Cards */
+#challenges {
+    background: #fdfdfd;
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.challenge-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: #fee2e2;
+}
+
+.challenge-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.bad-tag {
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.good-tag {
+    background: #d1fae5;
+    color: #065f46;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.05);
+    margin: 1.5rem 0;
+}
+
+.problem-text {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+/* Outcomes */
+.outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.outcome-pill {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.outcome-pill:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.outcome-pill h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: inherit;
+}
+
+.outcome-pill p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.outcome-pill:hover h5,
+.outcome-pill:hover p {
+    color: var(--white);
 }

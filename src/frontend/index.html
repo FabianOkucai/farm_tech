@@ -15,12 +15,7 @@
                 <div class="logo">
                     <h1>Farmtech Academy</h1>
                 </div>
-                <nav>
-                    <a href="#home">Home</a>
-                    <a href="#products">Solutions</a>
-                    <a href="#about">Our Vision</a>
-                    <a href="#contact">Connect</a>
-                </nav>
+                <button class="contact-btn" onclick="contactFunction()">Contact Us</button>
             </header>
             <div class="hero-content">
                 <span class="hero-tagline">Excellence in Poultry & Tech</span>
@@ -29,72 +24,68 @@
             </div>
         </section>
 
+        <!-- Dynamic Section: Core Values -->
+        <section id="values" class="container">
+            <div class="section-header">
+                <h2>Innovation & Core Values</h2>
+                <p class="section-desc">The principles driving the future of Kenyan poultry farming</p>
+            </div>
+            <div class="grid">
+                <!-- Injected via script.js -->
+            </div>
+        </section>
+
+        <!-- Dynamic Section: Challenges -->
+        <section id="challenges" class="container">
+            <div class="section-header">
+                <h2>The Challenge</h2>
+                <p class="section-desc">Overcoming the hurdles of traditional manual farming</p>
+            </div>
+            <div class="challenges-grid">
+                <!-- Injected via script.js -->
+            </div>
+        </section>
+
+        <!-- Dynamic Section: Innovation Highlights -->
+        <section id="innovation-highlights" class="container">
+            <div class="section-header">
+                <h2>Digital Solutions</h2>
+                <p class="section-desc">Specialized advancements for a tech-ready enterprise</p>
+            </div>
+            <div class="highlights-grid">
+                <!-- Injected via script.js -->
+            </div>
+        </section>
+
+        <!-- Dynamic Section: Products -->
         <section id="products" class="container">
             <div class="section-header">
                 <h2>Premium Solutions</h2>
             </div>
             <div class="grid">
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Organic Feed</h3>
-                        <p>Scientifically formulated organic chicken feed designed for optimal health and maximum yield.
-                            No antibiotics, just pure nutrition.</p>
-                        <button onclick="buyNow('Organic Chicken Feed')">Order Supplies</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Table Eggs</h3>
-                        <p>Farm-to-table excellence. Our fresh table eggs are collected daily from our bio-secure
-                            facilities to ensure premium quality.</p>
-                        <button onclick="buyNow('Fresh Table Eggs')">Order Now</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Health & Wellness</h3>
-                        <p>Essential health supplements and vitamins curated by agricultural experts to keep your flock
-                            thriving in all seasons.</p>
-                        <button onclick="buyNow('Health Supplements')">View Supplements</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Nesting Systems</h3>
-                        <p>Ergonomically designed nesting boxes that prioritize bird welfare and maximize egg production
-                            efficiency.</p>
-                        <button onclick="buyNow('Nesting Boxes')">Equip Your Farm</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Biosecurity</h3>
-                        <p>Professional vaccination programs and sanitization solutions to protect your investment from
-                            environmental risks.</p>
-                        <button onclick="buyNow('Vaccinations')">Consult Expert</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3>Quality Brood</h3>
-                        <p>Start with the best. Our day-old chicks are hatched from elite breeding stock with proven
-                            genetic performance.</p>
-                        <button onclick="buyNow('Day-Old Chicks')">Reserve Batch</button>
-                    </div>
-                </article>
+                <!-- Injected via script.js -->
             </div>
         </section>
 
+        <!-- Fixed Section: Vision -->
         <section id="about" class="container">
             <h2>Our Vision</h2>
             <p>At Farmtech Academy, we believe the future of food security lies at the intersection of heritage wisdom
-                and technological innovation. We don't just supply farming materials; we nurture a community of
-                tech-forward agriculturalists committed to sustainability and excellence.</p>
+                and technological innovation. We replace manual record-keeping with digital solutions, helping farmers
+                manage feeding schedules, vaccination programs, and sales tracking efficiently. Our platform improves
+                disease control, boosts productivity, and enables better business decisions through real-time data
+                management.</p>
+        </section>
+
+        <!-- Dynamic Section: Outcomes -->
+        <section id="outcomes" class="container">
+            <div class="section-header">
+                <h2>Project Impact</h2>
+                <p class="section-desc">Measurable outcomes and expected results</p>
+            </div>
+            <div class="outcomes-grid">
+                <!-- Injected via script.js -->
+            </div>
         </section>
 
         <section id="contact" class="container">
@@ -123,7 +114,8 @@
     </footer>
 
     <div id="toast" class="toast"></div>
-    <script src="script.js"></script>
+    <!-- Load data first, then logic -->
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>
