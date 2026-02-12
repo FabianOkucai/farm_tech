@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Farmtech Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="contact-page">
+    <main>
+        <header>
+            <div class="logo">
+                <h1 onclick="window.location.href='index.html'" style="cursor: pointer;">Farmtech Academy</h1>
+            </div>
+            <button class="contact-btn" onclick="window.location.href='index.html'">Back to Home</button>
+        </header>
+
+        <section class="container contact-content">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p class="section-desc">Have questions about our digital systems or poultry training? Reach out to our
+                    team of experts.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-form-side">
+                    <form id="contactForm"
+                        onsubmit="event.preventDefault(); showToast('Message sent successfully! Our team will contact you soon.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Select a topic</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="training">Training Programs</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" placeholder="How can we help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="contact-btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="contact-details-side">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <h4>Physical Office</h4>
+                            <p>Biashara Street, Nairobi, Kenya</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Direct Line</h4>
+                            <p>+254 723 852 270</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Email Support</h4>
+                            <p>sales@farmtechacademy.com</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 8:00 AM - 5:00 PM</p>
+                            <p>Sat: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Farmtech Academy. Redefining Modern Agriculture.</p>
+    </footer>
+
+    <div id="toast" class="toast"></div>
+    <script type="module">
+        import { showToast } from './script.js';
+        window.showToast = showToast;
+    </script>
+</body>
+
+</html>
