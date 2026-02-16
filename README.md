@@ -2,19 +2,19 @@
 
 **Bridging Traditional Farming and High-Tech Agriculture**
 
-Farmtech Academy is a modern training hub and e-commerce platform specializing in quality poultry supplies and agricultural education. This project has been migrated from a vanilla HTML/CSS implementation to a high-performance **Next.js** application with **Tailwind CSS**.
+Farmtech Academy is a modern training hub and e-commerce platform specializing in quality poultry supplies and agricultural education. Built with **React**, **React Router**, and **Tailwind CSS**.
 
 ## 🚀 Technology Stack
 
-- **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Framework**: React 18 with Vite
+- **Routing**: React Router v6
+- **Styling**: Tailwind CSS v3
 - **Typography**: Outfit & Montserrat (via Google Fonts)
 - **Language**: TypeScript
-- **Icons**: Custom CSS/SVG
 
 ## 🛠️ Project Structure
 
-- `src/app/`: Next.js App Router pages (Home, Login, Register, Contact)
+- `src/pages/`: React pages (Home, Academy, Login, Register, Contact)
 - `src/components/`: Reusable React components (Navbar, Footer)
 - `src/lib/`: Application logic and static data
 - `old_project/`: Archive of the original vanilla HTML/CSS implementation
@@ -40,7 +40,7 @@ Farmtech Academy is a modern training hub and e-commerce platform specializing i
 
 - **Modern Design**: Premium aesthetics inspired by Apple's design principles.
 - **Responsive Layout**: Fully optimized for mobile, tablet, and desktop.
-- **State-Driven Forms**: Functional contact and auth forms with user feedback.
+- **Direct Communication**: WhatsApp, SMS, and call integration for customer orders.
 - **Dynamic Content**: Sections populated from modular data structures for easy updates.
 
 ## 📈 Future Roadmap
@@ -52,3 +52,4 @@ Farmtech Academy is a modern training hub and e-commerce platform specializing i
 
 ---
 *Redefining Modern Agriculture.*
+

@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { poultryGuides } from "@/lib/data";
 
 export default function AcademyPage() {
@@ -93,7 +93,7 @@ export default function AcademyPage() {
                             <p className="text-text-muted mb-6">
                                 Learn about biosecurity protocols, disease prevention strategies, and optimal flock management systems.
                             </p>
-                            <Link href="/contact">
+                            <Link to="/contact">
                                 <button className="text-secondary font-bold hover:underline">
                                     Request Training Materials →
                                 </button>
@@ -104,7 +104,7 @@ export default function AcademyPage() {
                             <p className="text-text-muted mb-6">
                                 Get personalized advice from experienced poultry specialists on breed selection, housing design, and nutrition planning.
                             </p>
-                            <Link href="/contact">
+                            <Link to="/contact">
                                 <button className="text-secondary font-bold hover:underline">
                                     Book a Consultation →
                                 </button>

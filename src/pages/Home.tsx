@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import {
   stats,
   poultryFacts,
@@ -12,6 +13,9 @@ import {
 } from "@/lib/data";
 
 export default function Home() {
+  const [previewFlockSize, setPreviewFlockSize] = useState(500);
+  const previewDailyFeed = (previewFlockSize * 0.12).toFixed(1);
+  const previewMonthlyRevenue = ((Math.floor(previewFlockSize * 0.9) / 30) * 350 * 30).toLocaleString();
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -78,7 +82,7 @@ export default function Home() {
             <p className="text-xl text-text-muted leading-relaxed mb-8">
               We don't just sell supplies; we build entrepreneurs. Our educational path is designed to take you from a curious beginner to a master of digital poultry farming.
             </p>
-            <Link href="/academy">
+            <Link to="/academy">
               <button className="bg-primary text-white py-4 px-10 rounded-full font-bold hover:bg-secondary hover:scale-105 transition-all">
                 Enter the Academy
               </button>
@@ -94,6 +98,68 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Tools Section */}
+      <section className="bg-primary py-24 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10"></div>
+        <div className="max-w-[1200px] mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
+          <div className="flex-1 space-y-6">
+            <h2 className="text-[3.5rem] font-extrabold uppercase tracking-tight">Data-Driven Success</h2>
+            <p className="text-xl text-white/80 font-light leading-relaxed">
+              Stop guessing. Use our professional calculators to precisely estimate feed requirements and project your farm's profitability.
+            </p>
+            <div className="pt-4">
+              <Link to="/tools">
+                <button className="bg-secondary text-white py-4 px-10 rounded-full font-bold hover:bg-white hover:text-primary hover:scale-105 transition-all shadow-[0_4px_12px_rgba(0,0,0,0.2)]">
+                  Access Farm Tools
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="flex-1 bg-white/10 backdrop-blur-md rounded-[32px] p-8 border border-white/20 shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div className="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
+              <span className="text-secondary font-bold uppercase tracking-widest text-sm">Interactive Preview</span>
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+            </div>
+            <div className="space-y-6 font-outfit">
+              <div>
+                <label className="block text-white/70 text-sm mb-2 uppercase tracking-wider font-bold">Try it: Enter Flock Size</label>
+                <div className="relative">
+                  <input
+                    type="range"
+                    min="50"
+                    max="1000"
+                    step="10"
+                    value={previewFlockSize}
+                    onChange={(e) => setPreviewFlockSize(Number(e.target.value))}
+                    className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-secondary mb-4"
+                  />
+                  <div className="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3 border border-white/10">
+                    <span className="text-white font-bold text-lg">{previewFlockSize}</span>
+                    <span className="text-white/50 text-sm font-semibold uppercase">Birds</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 pt-2 border-t border-white/10">
+                <div>
+                  <span className="text-white/60 text-sm block mb-1">Daily Feed</span>
+                  <span className="text-2xl font-bold text-secondary">{previewDailyFeed} kg</span>
+                </div>
+                <div>
+                  <span className="text-white/60 text-sm block mb-1">Est. Revenue</span>
+                  <span className="text-2xl font-bold text-white leading-tight">KES {previewMonthlyRevenue}</span>
+                  <span className="text-white/40 text-[10px] block">/ month</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

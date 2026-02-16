@@ -1,8 +1,8 @@
-"use client";
+
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function RegisterPage() {
@@ -73,7 +73,7 @@ export default function RegisterPage() {
                         </button>
                         <p className="text-center mt-4 text-text-muted font-medium">
                             Already have an account?{" "}
-                            <Link href="/login" className="text-secondary font-bold hover:underline">
+                            <Link to="/login" className="text-secondary font-bold hover:underline">
                                 Login
                             </Link>
                         </p>
