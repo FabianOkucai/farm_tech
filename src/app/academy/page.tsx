@@ -9,14 +9,11 @@ export default function AcademyPage() {
             <Navbar />
 
             {/* Educational Header */}
-            <section className="bg-primary py-40 text-center text-white relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10">
-                    <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1920&q=80" alt="bg" className="w-full h-full object-cover" />
-                </div>
+            <section className="py-40 text-center relative overflow-hidden">
                 <div className="max-w-[800px] mx-auto px-6 relative z-10">
                     <span className="text-secondary font-bold uppercase tracking-[0.3em] text-sm mb-4 block">Knowledge Center</span>
-                    <h1 className="text-6xl font-extrabold mb-6 font-outfit uppercase tracking-tight">Poultry Management Guides</h1>
-                    <p className="text-xl text-white/80 font-light leading-relaxed">
+                    <h1 className="text-6xl font-extrabold mb-6 font-outfit uppercase tracking-tight text-primary">Poultry Management Guides</h1>
+                    <p className="text-xl text-text-muted font-light leading-relaxed">
                         Practical, step-by-step guidance on how to raise healthy, productive chickens.
                     </p>
                 </div>
@@ -81,24 +78,38 @@ export default function AcademyPage() {
                 </div>
             </section>
 
-            {/* Connection to Home/Marketplace */}
+            {/* Educational Resources Section */}
             <section className="py-24">
-                <div className="max-w-[800px] mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-bold text-primary mb-6 uppercase">Ready to Start Your Flock?</h2>
-                    <p className="text-text-muted text-lg mb-10">
-                        Now that you know the basics of poultry management, browse our marketplace for high-performance breeds.
-                    </p>
-                    <div className="flex justify-center gap-6">
-                        <Link href="/marketplace">
-                            <button className="bg-primary text-white py-4 px-10 rounded-full font-bold hover:bg-secondary hover:scale-105 transition-all">
-                                Browse Marketplace
-                            </button>
-                        </Link>
-                        <Link href="/contact">
-                            <button className="text-secondary font-bold hover:underline">
-                                Ask a Specialist
-                            </button>
-                        </Link>
+                <div className="max-w-[1000px] mx-auto px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-primary mb-6 uppercase">Continue Your Learning Journey</h2>
+                        <p className="text-text-muted text-lg">
+                            Expand your knowledge with these essential poultry farming resources
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="bg-white p-10 rounded-[30px] shadow-lg border border-black/5">
+                            <h3 className="text-2xl font-bold text-primary mb-4">Advanced Techniques</h3>
+                            <p className="text-text-muted mb-6">
+                                Learn about biosecurity protocols, disease prevention strategies, and optimal flock management systems.
+                            </p>
+                            <Link href="/contact">
+                                <button className="text-secondary font-bold hover:underline">
+                                    Request Training Materials →
+                                </button>
+                            </Link>
+                        </div>
+                        <div className="bg-white p-10 rounded-[30px] shadow-lg border border-black/5">
+                            <h3 className="text-2xl font-bold text-primary mb-4">Expert Consultation</h3>
+                            <p className="text-text-muted mb-6">
+                                Get personalized advice from experienced poultry specialists on breed selection, housing design, and nutrition planning.
+                            </p>
+                            <Link href="/contact">
+                                <button className="text-secondary font-bold hover:underline">
+                                    Book a Consultation →
+                                </button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

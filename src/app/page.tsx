@@ -33,18 +33,6 @@ export default function Home() {
           <p className="text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-[650px] font-light leading-relaxed">
             Premium supplies and technical training for modern poultry farmers.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mt-6">
-            <Link href="/academy">
-              <button className="bg-secondary hover:bg-accent text-white py-4 px-10 rounded-full font-bold transition-all hover:scale-105 cursor-pointer">
-                Start Training
-              </button>
-            </Link>
-            <Link href="/marketplace">
-              <button className="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 py-4 px-10 rounded-full font-bold transition-all hover:scale-105 cursor-pointer">
-                Explore Livestock
-              </button>
-            </Link>
-          </div>
         </div>
       </section>
 
