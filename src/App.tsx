@@ -5,6 +5,7 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Tools from './pages/Tools'
+import Profile from './pages/Profile'
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/tools" element={<Tools />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </>
   )

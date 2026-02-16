@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
@@ -7,13 +7,21 @@ import {
   poultryFacts,
   testimonials,
   visionSection,
-  products,
   innovationHighlights,
   educationalPath
 } from "@/lib/data";
 
 export default function Home() {
   const [previewFlockSize, setPreviewFlockSize] = useState(500);
+  const [apiProducts, setApiProducts] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3002/api/products')
+      .then(res => res.json())
+      .then(data => setApiProducts(data))
+      .catch(err => console.error('Failed to fetch products:', err));
+  }, []);
+
   const previewDailyFeed = (previewFlockSize * 0.12).toFixed(1);
   const previewMonthlyRevenue = ((Math.floor(previewFlockSize * 0.9) / 30) * 350 * 30).toLocaleString();
   return (
@@ -174,7 +182,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product, idx) => (
+            {apiProducts.map((product, idx) => (
               <div key={idx} className="bg-white rounded-[24px] p-10 shadow-sm border border-black/5 flex flex-col hover:shadow-lg transition-shadow">
                 <h3 className="text-2xl font-bold mb-4 text-primary font-outfit">{product.title}</h3>
                 <p className="text-text-muted leading-relaxed">{product.desc}</p>

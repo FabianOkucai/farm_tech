@@ -1,17 +1,40 @@
 
 
+import { useNavigate, Link } from "react-router-dom";
+import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function LoginPage() {
     const [showToast, setShowToast] = useState(false);
+    const [phone, setPhone] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setShowToast(true);
-        setTimeout(() => setShowToast(false), 5000);
+        setError("");
+        try {
+            const response = await fetch('http://localhost:3002/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ phone, password }),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                localStorage.setItem('user', JSON.stringify(data.user));
+                setShowToast(true);
+                setTimeout(() => {
+                    setShowToast(false);
+                    navigate("/");
+                }, 2000);
+            } else {
+                setError(data.error || "Login failed");
+            }
+        } catch (err) {
+            setError("Cannot connect to server");
+        }
     };
 
     return (
@@ -28,12 +51,19 @@ export default function LoginPage() {
 
                 <div className="bg-white p-10 rounded-[30px] shadow-lg border border-black/5">
                     <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                        {error && (
+                            <div className="bg-red-50 text-red-600 p-4 rounded-xl text-sm font-semibold border border-red-100">
+                                {error}
+                            </div>
+                        )}
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="email" className="font-outfit font-semibold text-sm text-primary">Email Address</label>
+                            <label htmlFor="phone" className="font-outfit font-semibold text-sm text-primary">Phone Number</label>
                             <input
-                                type="email"
-                                id="email"
-                                placeholder="email@example.com"
+                                type="tel"
+                                id="phone"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                placeholder="e.g. 0712345678"
                                 required
                                 className="w-full p-4 rounded-[12px] border border-black/10 font-montserrat text-base transition-all focus:outline-none focus:border-secondary focus:ring-4 focus:ring-secondary/10 bg-[#fdfdfd]"
                             />
@@ -43,6 +73,8 @@ export default function LoginPage() {
                             <input
                                 type="password"
                                 id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                                 placeholder="••••••••"
                                 required
                                 className="w-full p-4 rounded-[12px] border border-black/10 font-montserrat text-base transition-all focus:outline-none focus:border-secondary focus:ring-4 focus:ring-secondary/10 bg-[#fdfdfd]"
